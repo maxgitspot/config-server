@@ -20,6 +20,9 @@ logging:
       hibernate:
         SQL: debug
 
+server:
+  port: ${PORT:0}
+
 eureka:
   client:
     service-url:
