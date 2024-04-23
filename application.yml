@@ -61,7 +61,7 @@ resilience4j:
     limiters:
       baseRL:
         limit-for-period: 10
-        limit-refresh-period: 10s
+        limit-refresh-period: 60s
         timeout-duration: 2s
   timelimiter:
     configs:
