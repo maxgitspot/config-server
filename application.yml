@@ -30,3 +30,43 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${random.value}
     prefer-ip-address: true
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        event-consumer-buffer-size: 10
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 5
+        automatic-transition-from-open-to-half-open-enabled: true
+        wait-duration-in-open-state: 5s
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-size: 10
+        sliding-window-type: COUNT_BASED
+        slow-call-rate-threshold: 50
+        slow-call-duration-threshold: 1s
+        ignore-exceptions:
+          es.inetum.commons.exception.exceptions.BadRequestException   
+    instances:
+      baseCB: 
+        base-config: default
+  retry:
+    instances:
+      baseRetry:
+        max-attempts: 3
+        wait-duration: 10ms
+        ignore-exceptions:
+          es.inetum.commons.exception.exceptions.BadRequestException
+  ratelimiter:
+    limiters:
+      baseRL:
+        limit-for-period: 10
+        limit-refresh-period: 10s
+        timeout-duration: 2s
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 2s
+    instances:
+      baseTL:
+        base-config: default
