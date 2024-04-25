@@ -5,7 +5,7 @@ resilience4j:
   circuitbreaker:
     configs:
       default:
-        ignore-exceptions:
+        ignore-exceptions: []
     instances:
       parameters:
         base-config: default
@@ -16,4 +16,4 @@ resilience4j:
   retry:
     instances:
       baseretry:
-        ignore-exceptions:
+        ignore-exceptions: []
