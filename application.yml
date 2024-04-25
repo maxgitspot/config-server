@@ -48,9 +48,6 @@ resilience4j:
         sliding-window-type: COUNT_BASED
         slow-call-rate-threshold: 50
         slow-call-duration-threshold: 1s
-        ignore-exceptions:
-          - es.inetum.commons.exception.exceptions.BadRequestException
-          - es.inetum.commons.exception.exceptions.NotFoundException
     instances:
       baseCB: 
         base-config: default
@@ -59,8 +56,6 @@ resilience4j:
       baseRetry:
         max-attempts: 3
         wait-duration: 10ms
-        ignore-exceptions:
-          es.inetum.commons.exception.exceptions.BadRequestException
   ratelimiter:
     limiters:
       baseRL:

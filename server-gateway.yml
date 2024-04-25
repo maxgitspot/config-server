@@ -3,9 +3,6 @@ server:
 
 resilience4j:
   circuitbreaker:
-    configs:
-      default:
-        ignore-exceptions: 
     instances:
       parameters:
         base-config: default
@@ -13,7 +10,3 @@ resilience4j:
         base-config: default
       users:
         base-config: default
-  retry:
-    instances:
-      baseretry:
-        ignore-exceptions: 
