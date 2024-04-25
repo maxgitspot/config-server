@@ -13,6 +13,12 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+jwt:
+  secret:
+    key: DaMf63/tDssJb+Sn+EnQ66A43x/9G6tf1dz5+5gNTKktI1Vj/ku327C6n4vz+Pi51CKlFDxuY1t2DN3nRBapTgIuDTnzE9lW5S36D9azAm8bsDmhzy2+rAf3KmPdtP78mcW5PsoCZPYX+lGrbUSlTyFaE+oLP+B2P4NM0AirmQnIyFxhIUaZT1YKpSvqIDdg7VvlvlOhXZ1f6DHOlcfxF2WO4N6imvl7wqkFSJo5VzvzxHC2vl+kHoIqriR58HZkeiMu+Myi7n8jSB2AQRDf6gOkxiMZxzMAzuHB+QvZf3cxA3CnEy8LkOqBeu0FifTPaaFeiZR/ONLhIk+gurJg7N7LRljhpqpbbE66+/7tNGw=
+    
+prueba:
+  config: hola
 
 logging:
   level:
@@ -71,6 +77,3 @@ resilience4j:
       baseTL:
         base-config: default
 
-jwt:
-  secret:
-    key: DaMf63/tDssJb+Sn+EnQ66A43x/9G6tf1dz5+5gNTKktI1Vj/ku327C6n4vz+Pi51CKlFDxuY1t2DN3nRBapTgIuDTnzE9lW5S36D9azAm8bsDmhzy2+rAf3KmPdtP78mcW5PsoCZPYX+lGrbUSlTyFaE+oLP+B2P4NM0AirmQnIyFxhIUaZT1YKpSvqIDdg7VvlvlOhXZ1f6DHOlcfxF2WO4N6imvl7wqkFSJo5VzvzxHC2vl+kHoIqriR58HZkeiMu+Myi7n8jSB2AQRDf6gOkxiMZxzMAzuHB+QvZf3cxA3CnEy8LkOqBeu0FifTPaaFeiZR/ONLhIk+gurJg7N7LRljhpqpbbE66+/7tNGw=
