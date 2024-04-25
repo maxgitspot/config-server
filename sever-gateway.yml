@@ -13,3 +13,7 @@ resilience4j:
         base-config: default
       users:
         base-config: default
+  retry:
+    instances:
+      baseretry:
+        ignore-exceptions:
