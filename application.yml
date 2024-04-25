@@ -49,7 +49,8 @@ resilience4j:
         slow-call-rate-threshold: 50
         slow-call-duration-threshold: 1s
         ignore-exceptions:
-          es.inetum.commons.exception.exceptions.BadRequestException   
+          - es.inetum.commons.exception.exceptions.BadRequestException
+          - es.inetum.commons.exception.exceptions.NotFoundException
     instances:
       baseCB: 
         base-config: default

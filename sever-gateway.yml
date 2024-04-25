@@ -1,0 +1,15 @@
+server:
+  port: 8090
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        ignore-exceptions:
+    instances:
+      parameters:
+        base-config: default
+      operators:
+        base-config: default
+      users:
+        base-config: default
