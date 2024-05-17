@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://service-eureka:8761/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${random.value}
     prefer-ip-address: true
@@ -54,7 +54,7 @@ spring:
   application:
     name: service-parameters
   datasource:
-    url: jdbc:postgresql://ms-postgresql16:5432/ms_portanode_db
+    url: jdbc:postgresql://localhost:5432/ms_portanode_db
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
