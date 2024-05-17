@@ -75,4 +75,4 @@ logging:
         SQL: debug
 
 prueba:
-  config: esta es una propiedad de prueba del perfil docker
+  config: esta es una propiedad cambiada para probar el refresh desde docker
