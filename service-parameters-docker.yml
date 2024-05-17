@@ -75,4 +75,4 @@ logging:
         SQL: debug
 
 prueba:
-  config: esta es una propiedad para el perfil de docker
+  config: esta es una propiedad para el perfil de docker despues de cambiarla
